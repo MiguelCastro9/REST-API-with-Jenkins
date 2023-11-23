@@ -33,16 +33,14 @@ public class PersonController {
 
     @PostMapping("/save")
     public ResponseEntity<PersonResponseDto> save(@Valid @RequestBody PersonRequestDto personRequestDto) {
-        PersonModel personModel = personService.save(personRequestDto.convertPersonDtoForEntity());
-        return new ResponseEntity<PersonResponseDto>(PersonResponseDto.convertEntityForPersonDto(personModel), HttpStatus.CREATED);
+        PersonModel personModel = personServto>(PersonResponseDto.convertEntityForPersonDto(personModel), HttpStatus.CREATED);
     }
  dadaw
     @GetMapping("/list")
     public ResponseEntity<List<PersonResponseDto>> list() {
         return new ResponseEntity<List<PersonResponseDto>>(
                 personService.list().stream().map(person
-                        -> PersonResponseDto.convertEntityForPersonDto(person))
-                        .collect(Collectors.toList()), HttpStatus.OK);
+                        -> PersonResponseD
     }
 
     @GetMapping("/find/{id}")
@@ -54,7 +52,7 @@ public class PersonController {
     public ResponseEntity<PersonResponseDto> update(@PathVariable String id, @Valid @RequestBody PersonRequestDto personRequestDto) throws Exception {
         try {
             PersonModel personModel = personService.update(id, personRequestDto.convertPersonDtoForEntity());
-            return new ResponseEntity<>(PersonResponseDto.convertEntityForPersonDto(personModel), HttpStatus.OK);
+            return new ResponseEntity<>(PersonRespo.convertEntityForPersonDto(personModel), HttpStatus.OK);
         } catch (MessageCustomException e) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }

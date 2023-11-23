@@ -5,3 +5,20 @@ services:
     container_name: mongodb
     ports:
       - "27017:27017"
+  
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: jenkins
+    ports:
+      - "8080:8080"
+    volumes:
+      - "$PWD/jenkins_home:/var/jenkins_home"
+    networks:
+      - jenkins-net
+    environment:
+      - JENKINS_OPTS="--prefix=/jenkins"
+      - JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
+    restart: unless-stopped
+
+networks:
+  jenkins-net:

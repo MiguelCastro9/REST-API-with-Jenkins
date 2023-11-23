@@ -36,7 +36,7 @@ public class PersonController {
         PersonModel personModel = personService.save(personRequestDto.convertPersonDtoForEntity());
         return new ResponseEntity<PersonResponseDto>(PersonResponseDto.convertEntityForPersonDto(personModel), HttpStatus.CREATED);
     }
-
+ dadaw
     @GetMapping("/list")
     public ResponseEntity<List<PersonResponseDto>> list() {
         return new ResponseEntity<List<PersonResponseDto>>(

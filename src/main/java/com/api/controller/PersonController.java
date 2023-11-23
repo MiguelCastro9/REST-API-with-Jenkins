@@ -45,7 +45,7 @@ public class PersonController {
 
     @GetMapping("/find/{id}")
     public ResponseEntity<?> find(@PathVariable String id) {
-        return new ResponseEntity<>(personService.find(id), HttpStatus.OK);
+        return new ResponseEntity<>(personSvice.find(id), HttpStatus.OK);
     }
 
     @PutMapping("/update/{id}")

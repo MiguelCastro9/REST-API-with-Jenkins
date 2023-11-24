@@ -20,6 +20,20 @@ public class PersonRequestDto {
     
     @NotNull(message = "Birth date is required.")
     private Date birth_date;
+
+    public PersonRequestDto() {
+    }
+
+    public PersonRequestDto(String id, String name, Date birth_date) {
+        this.id = id;
+        this.name = name;
+        this.birth_date = birth_date;
+    }
+
+    public PersonRequestDto(String name, Date birth_date) {
+        this.name = name;
+        this.birth_date = birth_date;
+    }
     
     public PersonModel convertPersonDtoForEntity() {
         return new PersonModel(name, birth_date);

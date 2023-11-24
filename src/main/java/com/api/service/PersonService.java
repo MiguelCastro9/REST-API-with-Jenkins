@@ -57,4 +57,8 @@ public class PersonService {
                         }
                 );
     }
+    
+    public void deleteAll() {
+        personRepository.deleteAll();
+    }
 }

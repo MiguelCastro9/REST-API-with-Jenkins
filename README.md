@@ -17,15 +17,15 @@ Tools:
 To test the developed application, you need to have Java, Maven, Docker, Tomcat, Git and Jenkins installed on your machine.
 The machine on which the project was developed was MAC OS X, therefore, the steps below were carried out in <strong>MAC OS X</strong>:
 <br><br>
-<strong>1 -</strong> Open the terminal in the project root folder and run the mvn clean install command to build the application.
+<strong>1 -</strong> Open the terminal in the project root folder and run the <code>mvn clean install</code> command to build the application.
 <br>
-<strong>2 -</strong> In the same terminal, run the docker-compose up -d command to build the MongoDB docker image
+<strong>2 -</strong> In the same terminal, run the <code>docker-compose up -d</code> command to build the MongoDB docker image.
 <br>
-<strong>3 -</strong> Then run the brew services start jenkins-lts command to start Jenkins
+<strong>3 -</strong> Then run the <code>brew services start jenkins-lts</code> command to start Jenkins.
 <br>
-<strong>4 -</strong> Open a new terminal to start the tomcat server with the catalina run command
+<strong>4 -</strong> Open a new terminal to start the tomcat server with the <code>catalina run</code> command.
 <br><br>
-Now I will show the Jenkins configurations so that the application runs successfully in the CI/CD process.
+Now I will show the Jenkins configurations so that the application runs successfully in the <strong>CI/CD</strong> process.
 <br><br>
 Install <code>git plugin</code>
 <i><h6>control panel >> manage jenkins >> plugins</h6></i>

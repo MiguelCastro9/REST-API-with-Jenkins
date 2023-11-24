@@ -49,6 +49,7 @@ Config <code>Maven</code>
 
 https://github.com/MiguelCastro9/REST-API-with-Jenkins/assets/56695817/a38145ca-5a89-4bb4-abd8-f7eeec095e99
 
+https://github.com/MiguelCastro9/REST-API-with-Jenkins/assets/56695817/777b9785-857f-40ed-a18d-05c4dde577c7
 
 
 

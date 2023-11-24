@@ -15,7 +15,14 @@ public class PersonModel {
     // (String) because I use MongoDB
     private String id;
     
-   ame, Date birth_date) {
+    private String name;
+    
+    private Date birth_date;
+
+    public PersonModel() {
+    }
+
+    public PersonModel(String name, Date birth_date) {
         this.name = name;
         this.birth_date = birth_date;
     }

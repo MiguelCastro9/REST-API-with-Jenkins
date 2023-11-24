@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 script {
-                    sh 'test -f mvnw || curl -O https://raw.githubusercontent.com/apache/maven/master/mvnw'
+                    sh 'test -f mvnw || curl -O https://raw.githubusercontent.com/apache/maven/master/maven-wrapper/bin/mvnw'
                     sh 'chmod +x mvnw'
                     git branch: 'main', url: 'https://github.com/MiguelCastro9/REST-API-with-Jenkins.git'
                 }

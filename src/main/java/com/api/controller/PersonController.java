@@ -63,6 +63,6 @@ public class PersonController {
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable String id) {
         personService.delete(id);
-        return new ResponseEntity(HttpStatus.OK);
+        return new ResponseEntity(HttpStatus.NO_CONTENT);
     }
 }

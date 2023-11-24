@@ -4,9 +4,12 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
+                script {
+                    git branch: 'main', url: 'https://github.com/MiguelCastro9/REST-API-with-Jenkins.git'
+                }
             }
         }
+
 
         stage('Build') {
             steps {
